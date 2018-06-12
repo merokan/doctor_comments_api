@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+# Test suite for the Comment model
 RSpec.describe Comment, type: :model do
 
   it { should belong_to(:doctor) }
