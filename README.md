@@ -1,24 +1,17 @@
-# README
+# README for Joany Comments API Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version - 2.3.3
+* Rails version - 5.2.0
 
-Things you may want to cover:
+Building out a "Comment on your Doctor" functionality including comments and a 1-5 rating. API has ability to create, read, update, delete, and deactivate comments. Once a comment is created, a list of 5 recommended doctors in the same area with the same speciality are displayed to the user.
 
-* Ruby version
+I created models based off the schema provided, and added a Comment model, with a 1:M relationship to the author and doctor. I also added "city" and "state" columns to the Doctor table for the recommended doctors function.
 
-* System dependencies
+* Seed
 
-* Configuration
-
-* Database creation
-
-* Database initialization
+There is dummy data in the seed - to import, run rails db:seed
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+Project tested using RSpec and Factory Girl - to test, run rspec spec/
 
-* Deployment instructions
-
-* ...

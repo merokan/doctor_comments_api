@@ -26,11 +26,12 @@ RSpec.describe 'Comments API', type: :request do
 
     # Test suite for CREATE - POST /comments
     describe 'POST /api/v1/doctors/:doctor_id/comments' do
-        let(:valid_attributes) { { comment_body: 'A new comment on a doctor', rating: '4' } }
+        let(:valid_attributes) { { comment_body: 'A new comment on a doctor', rating: '4', author_id: '1', doctor_id: '1' } }
+
         context 'when the request is invalid' do
             before { post "/api/v1/doctors/#{doctor_id}/comments", params: { comment_body: 'Foobar' } }
-            it 'returns status code 422' do
-                expect(response).to have_http_status(422)
+            it 'returns status code 400 (bad_request)' do
+                expect(response).to have_http_status(400)
             end
             it 'returns a validation failure message' do
                 expect(response.body).to match(/Comment not saved/)
