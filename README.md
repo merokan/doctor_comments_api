@@ -1,4 +1,4 @@
-# README for Joany Comments API Project
+# README for Doctor Comments API Project
 
 * Ruby version - 2.3.3
 * Rails version - 5.2.0
